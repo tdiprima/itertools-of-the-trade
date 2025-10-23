@@ -18,23 +18,23 @@ import operator
 from operator import itemgetter
 from random import randint
 
-# --- Step 1: Generate some sample data ---
+# --- Generate some sample data ---
 # Simulate two lists of (category, value) pairs
 data1 = [("A", randint(1, 5)) for _ in range(5)]
 data2 = [("B", randint(1, 5)) for _ in range(5)]
 data3 = [("A", randint(1, 5)) for _ in range(5)]
 
-# --- Step 2: Chain all data sources together ---
+# --- Chain all data sources together ---
 all_data = itertools.chain(data1, data2, data3)
 
-# --- Step 3: Sort so groupby will work properly ---
+# --- Sort so groupby will work properly ---
 sorted_data = sorted(all_data, key=itemgetter(0))
 
-# --- Step 4: Group by category ---
+# --- Group by category ---
 grouped = itertools.groupby(sorted_data, key=itemgetter(0))
 
 
-# --- Step 5: For each group, sum the values using starmap + accumulate ---
+# --- For each group, sum the values using starmap + accumulate ---
 def process_group(group):
     cat, items = group
     values = [v for _, v in items]
@@ -48,7 +48,7 @@ def process_group(group):
 
 processed = itertools.starmap(process_group, grouped)
 
-# --- Step 6: Display results ---
+# --- Display results ---
 for cat, values, running, total in processed:
     print(f"\nCategory {cat}:")
     print(f"  Values: {values}")
