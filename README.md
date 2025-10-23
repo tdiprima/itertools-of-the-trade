@@ -1,6 +1,6 @@
 # 🛠️ Itertools of the Trade
 
-*"When in doubt, iterate it out."* 🌀
+*Generators? Infinite. Coffee? Also infinite.* ☕️ 🚀
 
 Welcome to **Itertools of the Trade**, a chill little lab for Python wizards who love iterables, generators, and all things lazy-evaluated.  
 This repo's packed with bite-sized scripts that show how to bend the `itertools` module (and a little `functools`) to your will — from chaining and grouping data to building infinite loops that never quit.
