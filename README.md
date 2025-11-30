@@ -19,7 +19,7 @@ Each file is basically a tiny demo of one idea — nothing wild, just practical 
 
 ## ⚙️ Why It Exists
 
-I just like having small, readable examples around when I need to remember a pattern or test an idea without spinning up a whole project.
+I just like having small, readable examples around when I need to remember a pattern or test an idea.
 
 ## 💡 Tip
 
