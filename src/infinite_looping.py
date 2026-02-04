@@ -20,9 +20,9 @@ from random import randint
 
 # --- Generate some sample data ---
 # Simulate two lists of (category, value) pairs
-data1 = [("A", randint(1, 5)) for _ in range(5)]
-data2 = [("B", randint(1, 5)) for _ in range(5)]
-data3 = [("A", randint(1, 5)) for _ in range(5)]
+data1 = [("A", randint(1, 5)) for _ in range(5)]  # nosec B311
+data2 = [("B", randint(1, 5)) for _ in range(5)]  # nosec B311
+data3 = [("A", randint(1, 5)) for _ in range(5)]  # nosec B311
 
 # --- Chain all data sources together ---
 all_data = itertools.chain(data1, data2, data3)
@@ -41,7 +41,7 @@ def process_group(group):
 
     # Use accumulate to show running totals
     running_totals = list(itertools.accumulate(values))
-    total = functools.reduce(operator.add, values)
+    total = functools.reduce(operator.add, values)  # noqa: FURB179
 
     return (cat, values, running_totals, total)
 

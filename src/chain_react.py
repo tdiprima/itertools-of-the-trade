@@ -28,7 +28,7 @@ evens = filter(lambda x: x % 2 == 0, all_nums)
 squares = map(lambda x: x**2, evens)
 
 # --- Reduce to a single sum using functools ---
-total = functools.reduce(operator.add, squares)
+total = functools.reduce(operator.add, squares)  # noqa: FURB179
 # total = sum(squares)
 
 # --- Display the pipeline result ---
